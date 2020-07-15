@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> <!--{{ url_for('static', filename='css/style.css') }}-->
+<body>
+  <!-- Start Header -->
+  <header class="" >
+    <div class="container">
+     <div class="row">
+        <div class="brand-name">
+            <a href="" class="logo">Kavinkumar</a>
+        </div>
+        <div class="three-bars">
+          <i class="fa fa-bars"></i>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="#hom" class="active">Home</a></li>
+                <li><a href="#abt">About</a></li>
+                <li><a href="#pro">Projects</a></li>
+                <li><a href="#ski">Skills</a></li>
+                <li><a href="#blo">Blog</a></li>
+                <li><a href="#con">Contact</a></li>
+            </ul>
+        </div>
+     </div>
+    </div>
+  </header>
+  <script>
+    const navbar = document.querySelector(".navbar");
+      a=navbar.querySelectorAll("a");
+      a.forEach(function (element) {
+        element.addEventListener("click",function(){
+          for(let i=0; i<a.length; i++){
+            a[i].classList.remove("active");
+          }
+          this.classList.add("active");
+          document.querySelector(".navbar").classList.toggle("show");
+        })
+      })
+
+      const bars = document.querySelector(".three-bars");
+      bars.addEventListener("click", function(){
+        document.querySelector(".navbar").classList.toggle("show");
+      })
+  </script>
+  <!-- End Header -->
+
+  <!--  Start Home -->
+  <section class="home" id="hom">
+    <div class="container">
+      <div class="row full-screen">
+        <div class="home-content">
+          <div class="block">
+            <h6>Hello, I am</h6>
+            <h1>Kavinkumar</h1>
+            <h3>Contenplative coder and Data Scientist</h3>
+            <div class="cv-btn">
+              <a href="{{ url_for('static', filename='img/Resume.docx') }}" download>Download Resume</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--  End Home -->
+<!-- Start About -->
+<section class="About" id="abt">
+  <div class="container">
+    <div class="row">
+      <div class="section-title">
+        <h1>About Me</h1>
+        <p class="small text-uppercase">All information to know about me</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="about-content">
+        <div class="row">
+         <div class="img">
+           <img src="{{ url_for('static', filename='img/Profile_pic.jpeg') }}"  alt="About" >
+         </div>
+         <div class="text">
+           <h4>I'm Kavinkumar Murthi</h4>
+           <h6>A <span>Machine Learning</span> aspirant based in <span>US</span></h6>
+           <p>Mathematics and Physics have always been the forefront of my inspiration</p>
+           <p>#scienceforlife</p>
+           <div class="info">
+             <div class="list">
+               <label>Birthday:</label>
+               <p>27th November 1996</p>
+             </div>
+             <div class="list">
+               <label>Email:</label>
+               <p>kavinkumar@gmail.com</p>
+             </div>
+             <div class="list">
+               <label>Age:</label>
+               <p>23yrs</p>
+             </div>
+             <div class="list">
+               <label>Phone:</label>
+               <p>+1 (484)641-3848</p>
+             </div>
+             <div class="list">
+               <label>Residence:</label>
+               <p>Pennsylvania, USA</p>
+             </div>
+             <div class="list">
+               <label>Address:</label>
+               <p>Lancaster Avenue, Malvern, PA</p>
+             </div>
+           </div>
+           <div class="social-links">
+             <a href="https://www.linkedin.com/in/kavinkumarrm/"><i class="fa fa-linkedin"></i></a>
+             <a href="https://github.com/KavinkumarRM"><i class="fa fa-github"></i></a>
+             <a href="https://medium.com/@kavin.amutha.ssr"><i class="fa fa-medium"></i></a>
+           </div>
+         </div>
+       </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/scrollreveal@4"></script>
+  <div class="container-time">
+    <div class="timeline-title">
+      <h2>Timeline of Events</h2>
+    </div>
+    <div class="timeline">
+      <ul>
+        <li>
+          <div class="content">
+            <h3>High school</h3>
+            <p>Mathematics and Computer Science</p>
+            <h4>GPA: 3.84</h4>
+          </div>
+        </li>
+        <li>
+          <div class="content">
+            <h3>Bachalors in Industrial Engineering</h3>
+            <p>CEG, Anna University</p>
+            <h4>GPA: 3.70</h4>
+          </div>
+        </li>
+        <li>
+          <div class="content">
+            <h3>Anlytics Intern</h3>
+            <p>Hyundai Motor Limited</p>
+            <h4>August 2017</h4>
+          </div>
+        </li>
+        <li>
+          <div class="content">
+            <h3>Masters in Data Analytics</h3>
+            <p>AI and ML</p>
+            <h4>GPA: 3.90</h4>
+          </div>
+        </li>
+        <li>
+          <div class="content">
+            <h3>AI Engineer (Freelancer)</h3>
+            <p>Computer Vision</p>
+            <h4>September 2018 - December 2018</h4>
+          </div>
+        </li>
+        <li>
+          <div class="content">
+            <h3>Independent Study</h3>
+            <p>United Airlines</p>
+            <h4>January 2019 - May 2019</h4>
+          </div>
+        </li>
+        <li>
+          <div class="content">
+            <h3>Research Assistant</h3>
+            <p>Penn State University</p>
+            <h4>January 2019 - May 2019</h4>
+          </div>
+        </li>
+        <div style="clear: both;"></div>
+      </ul>
+    </div>
+  </div>
+  <script type="text/javascript">
+    window.sr = ScrollReveal({ reset: true });
+    sr.reveal('.content', {
+        viewFactor: 1,
+        reset: false
+      });
+  </script>
+</section>
+
+<!-- end about-->
+
+<!-- start project-->
+<section class="project" id="pro">
+  <div class="container">
+    <div class="row">
+      <div class="section-title text-center">
+        <h1>My Projects</h1>
+        <p>These are my recent works</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="project-content" id="pc">
+          <div class="box" id="hi">
+            <div class="icon">
+              <img class="img1" src="{{ url_for('static', filename='img/human_identifier_2.png') }}" height="30" , width="30">
+            </div>
+            <h4>Human Identifier</h4>
+            <p><a href="https://youtu.be/digSn4h_mvw">human identifier is a dynamically adaptable human identifier application which can be used for various realtime
+            application such as human attendance tracking, automated photo transfer between friends
+            and could be used as a security system</a></p>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <img class="img1" src="{{ url_for('static', filename='img/regression.png') }}" height="30" , width="30">
+            </div>
+            <h4>Poly Hyperparameter Tuning</h4>
+            <p><a>Performing Grid search on all possible hyperparameter is time consuming and the most worst part is when you dont
+            get the required result. This is one of my try to find out the optimal hyperparameter using the data aquired by grid search and Calculas.
+            </a></p>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <img class="img1" src="{{ url_for('static', filename='img/stop-sign.png') }}" height="40" , width="40">
+            </div>
+            <h4>Traffic Sign Detection</h4>
+            <p><a href="https://medium.com/@kavin.amutha.ssr">A completely functional real-time Traffic sign detection system capable of detecting traffic signs in low light evenings and nights.
+            Implemented a custom-build traning system to deal with overly baised sign system in the United States</a></p>
+          </div>
+          <div class="box" id="mf">
+            <div class="icon">
+              <img class="img1" src="{{ url_for('static', filename='img/face.png') }}" height="35" , width="35">
+            </div>
+            <h4>Musical Face</h4>
+            <p><a>Being able to play music based on your face emotion would be of a great break through in music.
+            This feature could be used in situation where you could not afford to loose a little distraction. Initially have made a spotify API with this feature for this project.</a></p>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <img class="img1" src="{{ url_for('static', filename='img/dna.png') }}" height="40" , width="40">
+            </div>
+            <h4>Binary tree classifier</h4>
+            <p><a>Binary tree calssifier is a ML tree architecture consiting of ML models employed for multi level classification of NLP data.
+            Each node consist of a ML mode to decide further flow of the data through the tree. Developed AutoML API for model selection to power the tree. </a></p>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <img class="img1" src="{{ url_for('static', filename='img/flight.png') }}" height="40" , width="40">
+            </div>
+            <h4>Flight crew identification</h4>
+            <p><a>Build a computer vision system to ensure the minimum number of fight crew on board before taking off.
+              Motion detection along with Res-Net served as the base for the algorithm which was trained to detect crew members from people passing by the camera</a></p>
+          </div>
+          <div id="popup1" class="overlay">
+          	<div class="popup">
+          		<h2>Title</h2>
+          		<a class="close" href="#fixed">×</a>
+          		<div class="content">
+          			<div class="row">
+                  <div class="box1">
+                    <h4>Human Identifier</h4>
+                    <p>The website link is about to be build</p>
+                  </div>
+                </div>
+          		</div>
+          	</div>
+          </div>
+          <div id="popup2" class="overlay">
+          	<div class="popup">
+          		<h2>Title</h2>
+          		<a class="close" href="#fixed">×</a>
+          		<div class="content">
+          			<div class="row">
+                  <div class="box1">
+                    <h4>Musical Face</h4>
+                    <p>The website link is about to be build</p>
+                  </div>
+                </div>
+          		</div>
+          	</div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- end project-->
+
+
+<!-- start skill-->
+<section class="skills" id="ski">
+  <div class="container">
+    <div class="row align-item-center">
+      <div class="skills-content">
+        <div class="row">
+          <div class="section-title">
+            <h1>Professional Skills</h1>
+            <p>Skills subject goes here</p>
+          </div>
+        </div>
+        <div class="row">
+        <div class="row" id="side-left">
+          <div class="skill-box">
+            <h6>Python</h6>
+            <div class="skill-bar">
+                <div class="skill-bar-in" style="width: 90%">
+                  <span>90%</span>
+                </div>
+            </div>
+          </div>
+          <div class="skill-box">
+            <h6>R - Programming</h6>
+            <div class="skill-bar">
+              <div class="skill-bar-in" style="width: 75%">
+                <span>75%</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-box">
+            <h6>Computer Vision (OpenCV, Keras)</h6>
+            <div class="skill-bar">
+              <div class="skill-bar-in" style="width: 70%">
+                <span>70%</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-box">
+            <h6>NLP (Keras)</h6>
+            <div class="skill-bar">
+              <div class="skill-bar-in" style="width: 70%">
+                <span>70%</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-box">
+            <h6>Python API (Flask)</h6>
+            <div class="skill-bar">
+              <div class="skill-bar-in" style="width: 55%">
+                <span>55%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" id="side-right">
+          <div class="skill-box">
+            <h6>Deep Learning (Tensorflow, Keras)</h6>
+            <div class="skill-bar">
+              <div class="skill-bar-in" style="width: 85%">
+                <span>85%</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-box">
+            <h6>Database (SQL)</h6>
+            <div class="skill-bar">
+              <div class="skill-bar-in" style="width: 80%">
+                <span>80%</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-box">
+            <h6>Statistics (Minitab, R)</h6>
+            <div class="skill-bar">
+              <div class="skill-bar-in" style="width: 70%">
+                <span>70%</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-box">
+            <h6>Visualization (Tableau)</h6>
+            <div class="skill-bar">
+              <div class="skill-bar-in" style="width: 60%">
+                <span>60%</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-box">
+            <h6>Front end (HTML, CSS, Java)</h6>
+            <div class="skill-bar">
+              <div class="skill-bar-in" style="width: 35%">
+                <span>35%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script type="text/javascript">
+window.onscroll = function(){
+  }
+
+</script>
+<!-- end skill-->
+
+
+
+<!-- start demo-->
+
+<section class="deploy">
+  <div class="container" style="background:rgb(25,25,25);">
+    <div class="row deploy-temp">
+      <div class="section-title text-center">
+        <h2 style="color:#ffffff;">Fun of deployment</h2>
+      </div>
+      <div class="drop text-center">
+        <i class="fa fa-arrow-circle-down" id="dropup" style="font-size:48px;color:#62bdfc"></i>
+      </div>
+      <div class='video-container' id="container">
+        <div class="but-top">
+        <button class="start" id="start"><i class="fa"><p>Allow Camera Access</p></i></button>
+      </div>
+        <div class="video-box">
+          <video class="video" autoplay="true" id="videoElement" width="640" height="480">
+            <p>The backend deployment is a simple Face dectection algorithm</p>
+        	</video>
+        </div>
+        <div class="but-bottom">
+        <button id='capture' class="start-down"><a class="fa" href="#popuup2"> Snap</a></button>
+      </div>
+        <!-- overlay-->
+        <div id="popuup2" class="overlay">
+          <div class="popup popupvideo">
+            <a class="close" href="#fixed">×</a>
+            <div class="content">
+              <canvas class="prediction" id="canvas" width="640" height="480"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- overlay-->
+      </div>
+      <div class="drop">
+        <i class="fa fa-arrow-circle-up" id="dropdown" style="font-size:48px;color:#62bdfc"></i>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var section = document.getElementById("container");
+    var dropdown = document.getElementById("dropup");
+    var dropup = document.getElementById("dropdown")
+    section.style.display='none';
+    dropup.style.display='none';
+    dropdown.addEventListener("click",function(){
+      dropdown.style.display='none';
+      section.style.display='block';
+      dropup.style.display='block';
+    })
+    dropup.addEventListener("click",function(){
+      dropdown.style.display='block';
+      section.style.display='none';
+      dropup.style.display='none';
+    })
+  </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script>
+  var canvas = document.getElementById('canvas');
+  var context = canvas.getContext('2d');
+  var video = document.getElementById('videoElement');
+
+  document.getElementById("capture").addEventListener("click", function() {
+      context.drawImage(video, 0, 0, 640, 480);
+      //context.putImageData(video, 0, 0, 640, 480);
+      //console.log(PNG.parse(document.getElementById('canvas')))
+      var dataURL = canvas.toDataURL();
+      var object =$.ajax({
+        type: "POST",
+        url: "http://127.0.0.1:5000/hooks",
+        data:{
+          imageBase64: dataURL
+        }
+      }).done(function() {
+        console.log('sent');
+        console.log(object);
+        const img = new Image()
+        img.src = object.responseText
+        img.onload = () => {
+          console.log('loaded')
+          context.drawImage(img, 0, 0, 640, 480)
+        }
+      });
+      });
+  </script>
+  <script type="text/javascript">
+    var imputecapture = document.getElementById('capture');
+    imputecapture.style.display = 'none';
+    document.getElementById("start").addEventListener("click", function(){
+      var video = document.getElementById('videoElement');
+      var button = document.getElementById('start');
+      button.style.display='block';
+      this.style.display='none';
+      if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+          navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+              //video.src = window.URL.createObjectURL(stream);
+              video.srcObject = stream;
+              video.play();
+              imputecapture.style.display = 'block';
+          });
+      }
+    })
+  </script>
+
+</section>
+
+
+<!-- end demo-->
+
+
+<!-- start blog -->
+<section class="blog" id="blo">
+
+  <div class="container">
+    <div class="row">
+      <div class="section-title text-center">
+        <h1>Blog</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="box blog-header">
+        <h1>I'm a Machine Learning Enthusiast</h1>
+      </div>
+    </div>
+
+  <div class="row">
+    <div class="blog-content">
+      <div class="blog-box">
+        <h4>Where I have been</h4>
+        <p>Born and brought up in a small town in southern part of india. I have been through various phases of family hardship right from my 6th year through
+
+          life. Being a part of culturally ethical family getting off the problems took us over 10 years. This made a positive impact on me towards being successful right at the age of 9 when kids tend to be playful.
+
+          During my 6th grade i had a huge impact of my life when i got the school Maths/science pandit award for overall Maths/science performance. Right from then i am chasing my dream towards them.<p>
+      </div>
+      <div class="blog-box">
+        <h4>What I am doing</h4>
+        <p> I pursued my High school majoring in Maths,Physics and Computer Science. Being a top High school scorer, I had a chance of pursueing statistics and Industrial Engineering at Anna University, Chennai.
+
+          This was a great change over in my life moving from a small city to one of a great metro of India. Majoring in Multi-Variate Statistics had a huge impact on fine tuning me towards AI which is the
+
+          to me a cross over between Maths and Physics principles. My next big change over was when i got admitted into Penn State for Masters in Data Science <p>
+      </div>
+      <div class="blog-box">
+        <h4>What I hope to do</h4>
+        <p> Majoring in Data Science and ML gave me a sense of satisfaction of pursuing Maths and Physics at the same time. My perspective towards Machine Learning concepts have always made me amaze how simple physics law would
+
+          help Machines learn human level intelligence. My life goal is to be one of the finest ML engineer in the world pioneering human towards what have not been achieved and that have been told that human intelligence could not
+
+          achieve anytime. I am looking for my next step in my career and believe for sure would amaze me like before. <p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- end blog-->
+
+<!-- start contact-->
+
+<section class="contact" id="con">
+  <div class="container">
+    <div class="row">
+      <div class="section-title text-center">
+        <h1 style="font-size: 30px!important;">Incase wanna say Hi!</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="contact-form">
+        <div class="row">
+          <div class="text">
+            <h2>Drop me a line</h2>
+            <p>I would be happy to hear from you</p>
+          </div>
+        </div>
+        <div class="row space-between">
+          <div class="col-6">
+            <input type="text" class="form-control Name" id="Name" name="" value="" placeholder="Name">
+          </div>
+          <div class="col-6">
+            <input type="text" class="form-control" id="Email" name="" value="" placeholder="Email">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <textarea class="form-control" name="name" id="Message" rows="8" cols="80" placeholder="Your Message"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="button text-right" id="Submit">
+            <a href="#fixed">Get in touch</a>
+          </div>
+        </div>
+        <div class="message">
+          <p id="msg" style="display:none;">Thanks for your message</p>
+          <p id="war" style="display:none;">Atleast one field is required</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script type="text/javascript">
+  document.getElementById("Submit").addEventListener("click", function(){
+    var Name1 = document.getElementById("Name").value;
+    var Email1 = document.getElementById("Email").value;
+    var Message1 = document.getElementById("Message").value;
+    if(Name1 == "" && Email1 == "" && Message1 == ""){
+      document.getElementById("msg").style.display="none";
+      document.getElementById("war").style.display="block";
+    } else{
+    $.ajax({
+      type: "POST",
+      url: "http://127.0.0.1:5000/contact",
+      data:{
+        Name: Name1,
+        Email: Email1,
+        Message: Message1
+      }
+    })
+    document.getElementById("war").style.display="none";
+    document.getElementById("msg").style.display="block";
+    document.getElementById("Name").value="";
+    document.getElementById("Email").value="";
+    document.getElementById("Message").value="";
+  }
+  })
+</script>
+
+<!-- stop contact-->
+
+
+<!-- start Footer-->
+<footer>
+  <div class="container">
+    <div class="logo">
+      Kavinkumar
+    </div>
+    <div class="row">
+      <div class="footer-content space-between">
+            <div class="this-page">
+                  <h4>About this page</h4>
+                  <p>This website was developed on my intrest towards front-end and ML model deployment.
+                     The website was built using HTML, CSS, Java-script and is hosted on github. The backend is hosted by Flask API  build upon Python.</p>
+            </div>
+            <div class="follow-me">
+                  <div class="follow-head">
+                    <p>Follow me</p>
+                  </div>
+                  <div class="follow-element space-between">
+                    <div class="github">
+                      <a href="https://github.com/KavinkumarRM">
+                      <h4 style="text-align:center;">Github</h4>
+                      <p>My Operational base</p></a>
+                    </div>
+                    <div class="linkedin">
+                      <a href="https://www.linkedin.com/in/kavinkumarrm/">
+                      <h4 style="text-align:center;">LinkedIn</h4>
+                      <p>My Marketing base</p></a>
+                    </div>
+                  </div>
+            </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!--End Footer-->
+</body>
+<script type="text/javascript">
+  window.onscroll = function(){
+    const docScrollTop=document.documentElement.scrollTop;
+    if (window.innerWidth>767) {
+      if (docScrollTop>100) {
+        document.querySelector('header').classList.add('fixed');
+      }
+      else {
+        document.querySelector('header').classList.remove('fixed');
+      }
+    } else{
+      document.querySelector('header').classList.remove('fixed');
+    }
+    const skillsLeft = document.getElementById("side-left");
+    const skillsRight = document.getElementById("side-right");
+    if (window.innerWidth<767){
+      skillsLeft.classList.remove("left-skill");
+      skillsRight.classList.remove("right-skill");
+    } else{
+      skillsLeft.classList.add("left-skill");
+      skillsRight.classList.add("right-skill");
+    }
+  }
+</script>
+</html>
